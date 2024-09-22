@@ -29,6 +29,10 @@ LABEL copyright.name="Vicente Eduardo Ferrer Garcia" \
 
 COPY / /metacall/
 
+RUN chmod +x /metacall/scripts/build_install.sh \
+    /metacall/scripts/build_install.sh 
+
+
 RUN chmod +x /metacall/scripts/build.sh \
 	&& mkdir -p /metacall/pack \
 	&& mv /metacall/channels/channels.scm /root/.config/guix/channels.scm
